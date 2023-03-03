@@ -34,7 +34,7 @@ LCD_4_5_Digits lcd(latchPin, clockPin, dataPin);
 
 void setup()
 {
-  // Serial.begin(9600);
+  Serial.begin(9600);
   Serial.println("let's start");
   lcd.init();
   lcd.set_integer(6666);
@@ -42,12 +42,14 @@ void setup()
 
 void loop()
 {
-  lcd.set_float(1.904, 4);
+  lcd.set_float(0.904, 3);
   delay(1000);
-  lcd.set_float(1.904, 3);
+  lcd.set_float(0.904, 2);
   delay(1000);
-  lcd.set_float(1.904, 2);
+  lcd.set_float(0.904, 1);
   delay(1000);
-  lcd.set_float(1.904, 1);
+  lcd.set_float(0.904, 0);
+  delay(1000);
+  lcd.set_float(-0.904, 0);
   delay(1000);
 }
