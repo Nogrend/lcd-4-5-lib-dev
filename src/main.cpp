@@ -44,7 +44,7 @@ void setup()
 
 void loop()
 {
-  for (uint16_t counter; counter < MAX_VALUE; counter++){
+  for (uint16_t counter=0; counter < MAX_VALUE; counter++){
     lcd.set_value(counter);
     delay(100);
   }
