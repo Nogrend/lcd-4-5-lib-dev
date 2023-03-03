@@ -2,7 +2,7 @@
 #include <LCD_4_5_Digits.h>
 #include <esp8266_gpio_mapping.h>
 
-#define MAX_VALUE  19999
+#define MAX_VALUE 19999
 
 // 0x57
 // 0x68
@@ -37,21 +37,17 @@ void setup()
   // Serial.begin(9600);
   Serial.println("let's start");
   lcd.init();
-  lcd.set_value(6666);
+  lcd.set_integer(6666);
 }
-
-
 
 void loop()
 {
-  for (uint16_t counter=0; counter < MAX_VALUE; counter++){
-    lcd.set_value(counter);
-    delay(100);
-  }
-
+  lcd.set_float(1.904, 4);
+  delay(1000);
+  lcd.set_float(1.904, 3);
+  delay(1000);
+  lcd.set_float(1.904, 2);
+  delay(1000);
+  lcd.set_float(1.904, 1);
+  delay(1000);
 }
-
-
-
-
-
