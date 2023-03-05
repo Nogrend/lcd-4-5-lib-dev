@@ -42,14 +42,15 @@ void setup()
 
 void loop()
 {
-  lcd.set_float(0.904, 3);
-  delay(1000);
-  lcd.set_float(0.904, 2);
-  delay(1000);
-  lcd.set_float(0.904, 1);
-  delay(1000);
-  lcd.set_float(0.904, 0);
-  delay(1000);
-  lcd.set_float(-0.904, 0);
-  delay(1000);
+  for (float i = -1.0; i < 1.0; i += 0.1)
+  {
+    lcd.set_float(i, 0);
+    delay(1000);
+  }
+
+  for (float i = -110.0; i < 110.0; i += 0.1)
+  {
+    lcd.set_float(i, 0);
+    delay(100);
+  }
 }
